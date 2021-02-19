@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-way-of-samurai/static/css/main.375fcc52.chunk.css",
+    "main.js": "/react-way-of-samurai/static/js/main.7b7420f9.chunk.js",
+    "main.js.map": "/react-way-of-samurai/static/js/main.7b7420f9.chunk.js.map",
+    "runtime-main.js": "/react-way-of-samurai/static/js/runtime-main.68c64450.js",
+    "runtime-main.js.map": "/react-way-of-samurai/static/js/runtime-main.68c64450.js.map",
+    "static/js/2.d67782db.chunk.js": "/react-way-of-samurai/static/js/2.d67782db.chunk.js",
+    "static/js/2.d67782db.chunk.js.map": "/react-way-of-samurai/static/js/2.d67782db.chunk.js.map",
+    "index.html": "/react-way-of-samurai/index.html",
+    "static/css/main.375fcc52.chunk.css.map": "/react-way-of-samurai/static/css/main.375fcc52.chunk.css.map",
+    "static/js/2.d67782db.chunk.js.LICENSE.txt": "/react-way-of-samurai/static/js/2.d67782db.chunk.js.LICENSE.txt",
+    "static/media/preloader.b767aab4.svg": "/react-way-of-samurai/static/media/preloader.b767aab4.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68c64450.js",
+    "static/js/2.d67782db.chunk.js",
+    "static/css/main.375fcc52.chunk.css",
+    "static/js/main.7b7420f9.chunk.js"
+  ]
+}
