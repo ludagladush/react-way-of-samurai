@@ -1,0 +1,15 @@
+.dialog {
+    padding: 10px;
+}
+
+.nameLink {
+    color: #4b3c4c;
+}
+
+.dialog :hover {
+    color: red;
+}
+
+.dialog a :active {
+    color: red;
+}
