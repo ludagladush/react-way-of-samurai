@@ -5,27 +5,41 @@ import { required } from '../../utils/validators/validators';
 import { login } from '../../redux/auth-reducer';
 import { Redirect } from 'react-router-dom';
 import s from '../common/form-controls/forms-control.module.css';
+import './login.css';
 import { createField, Input } from '../common/form-controls/forms-control';
 
 
 const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
     return (
-        <form onSubmit={ handleSubmit }>
-            {createField("Email", "email", [required], Input)}
-            {createField("Password", "password", [required], Input, {type: "password"})}
-            {createField(null, "rememberMe", [], Input, {type: "checkbox"}, "remember me")}
-            
-            { captchaUrl && <img src={captchaUrl} alt=''/>}
-            { captchaUrl &&  createField("Symbols from image", "captcha", [required], Input, {}) }
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <form onSubmit={ handleSubmit } >
+                    <div class="form-group">
+                        {createField("Email", "email", [required], Input)}
+                        {createField("Password", "password", [required], Input, {type: "password"})}
+                        <div className="row justify-content-center align-items-center">
+                                {createField(null, "rememberMe", [], Input, { id: 'rememberMe', type: "checkbox", className:''})}
+                                <label htmlFor="rememberMe" className="">Remember me</label>
+                        </div>
 
-               
-            { error && <div className={ s.formSummaryError }>
-                {  error }
-            </div> } 
-            <div>
-                <button>Login</button>
+                            {/* <input class="form-check-input" type="checkbox" value="" checked="">
+                            Option one is this and that—be sure to include why it's great</label> */}
+
+                        
+                        { captchaUrl && <img src={captchaUrl} alt=''/>}
+                        { captchaUrl &&  createField("Symbols from image", "captcha", [required], Input, {}) }
+
+                        
+                        { error && <div className={ s.formSummaryError }>
+                            {  error }
+                        </div> } 
+                        <div>
+                            <button>Login</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     )
 }
 
@@ -40,14 +54,14 @@ const Login = (props) => {
         return <Redirect to={'/profile'} />
     }
     
-    return <div>
+    return <div className='login-form'>
         <h1>Login</h1>
         <LoginReduxForm onSubmit={ onSubmit } captchaUrl={props.captchaUrl}/>
     </div>
 }
 
 const mapStateToProps = (state) => ({
-    captchaUrl: state.auth.captchaUrl,
+    
     isAuth: state.auth.isAuth
 })
 

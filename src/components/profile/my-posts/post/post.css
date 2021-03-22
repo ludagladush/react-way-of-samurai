@@ -8,6 +8,15 @@
     margin: 20px;
 }
 
+.post-message {
+    margin: 10px
+}
+
+.post-likes {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
 /* .itemText {
     padding: 0 0 0 30px ;
 } */

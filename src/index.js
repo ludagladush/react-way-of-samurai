@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import "bootswatch/dist/sketchy/bootstrap.min.css";
 import SamuraiJSApp from './components/app/app';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/redux-store';

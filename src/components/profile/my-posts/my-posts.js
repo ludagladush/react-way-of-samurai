@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { maxLengthCreator, required } from '../../../utils/validators/validators';
 import { Textarea } from '../../common/form-controls/forms-control';
-import s from './my-posts.module.css';
+import './my-posts.css';
 import Post from './post'; 
 
 
@@ -15,8 +15,8 @@ const AddNewPostForm = (props) => {
                 <Field name='newPostText' component={ Textarea } placeholder='Post message' 
                     validate={ [required, maxLength10] }/>
             </div>
-            <div className={ s.button }>
-                <button>Add post</button>
+            <div className='button'>
+                <button className='btn btn-primary'>Add post</button>
             </div>
         </form>
     )
@@ -28,7 +28,7 @@ const MyPosts = React.memo(props => {
     let postsElements =
         [...props.posts]
             .reverse()
-            .map(p => <Post key={p.id} message={p.message} likesCount={p.likes}/>);
+            .map(p => <Post key={p.id} message={p.message} likesCount={p.likes} />);
 
     // let newPostElement = React.createRef();
     
@@ -37,10 +37,15 @@ const MyPosts = React.memo(props => {
     }
 
        return(
-        <div className={ s.myPosts }>
-            <h3>My Posts</h3>
-            <AddNewPostFormRedux onSubmit={ onAddPost }/>
-            <div className={ s.posts }>
+        <div className='myPosts'>
+        <div className='hd-inp'>
+            <h2 className='mp-header'>My Posts</h2>
+            <div className='form-group'>
+                <label className="col-form-label col-form-label-lg" for="inputLarge">Whrite your post</label>
+                <AddNewPostFormRedux onSubmit={ onAddPost } className='mp-input' id="inputLarge" type="text"/>
+            </div>
+        </div>
+            <div className='posts'>
                 { postsElements }
             </div>
         </div>
