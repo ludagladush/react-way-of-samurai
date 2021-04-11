@@ -11,10 +11,10 @@ import { createField, Input } from '../common/form-controls/forms-control';
 
 const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
     return (
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
+        <div className="container">
+            <div className="row justify-content-center align-items-center">
                 <form onSubmit={ handleSubmit } >
-                    <div class="form-group">
+                    <div className="form-group">
                         {createField("Email", "email", [required], Input)}
                         {createField("Password", "password", [required], Input, {type: "password"})}
                         <div className="row justify-content-center align-items-center">

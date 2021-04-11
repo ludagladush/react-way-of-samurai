@@ -59,7 +59,7 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
             <div className='row'>
                 <div className='col-10'> 
                     <table className="table table-hover">
-                        {/* <thread> */}
+                        <thead>
                             <tr>
                                 <th scope="row"><b>Looking for a job</b>:</th>
                                 <td>{ profile.lookingForAJob ? "yes" : "no" }</td>
@@ -83,7 +83,7 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
                             })}</td>
                             </tr>
 
-                        {/* </thread> */}
+                        </thead>
                     </table>
                     {/* <div>
                         <b>Full name</b>: {profile.fullName}

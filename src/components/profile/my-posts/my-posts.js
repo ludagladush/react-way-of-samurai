@@ -41,7 +41,7 @@ const MyPosts = React.memo(props => {
         <div className='hd-inp'>
             <h2 className='mp-header'>My Posts</h2>
             <div className='form-group'>
-                <label className="col-form-label col-form-label-lg" for="inputLarge">Whrite your post</label>
+                <label className="col-form-label col-form-label-lg" htmlFor="inputLarge">Whrite your post</label>
                 <AddNewPostFormRedux onSubmit={ onAddPost } className='mp-input' id="inputLarge" type="text"/>
             </div>
         </div>
