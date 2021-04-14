@@ -9,9 +9,21 @@
 
 
 .avatar {
-    display: block;
-    position:relative;
+    /* display: block; */
+    /* position:relative; */
     margin-top: 20px;
+}
+
+.avatar img {
+    max-width: 100%;
+}
+
+.contacts {
+    vertical-align: top !important;
+}
+
+.table thead th  {
+    border-bottom: transparent;
 }
 
 .ch-ph-button {

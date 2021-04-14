@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Header = (props) => {
     return(
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a className="navbar-brand" href="/profile">SamuraiJS</a>
+        <a className="navbar-brand">SamuraiJS</a>
         <div className="collapse navbar-collapse" id="navbarColor01">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
@@ -14,10 +14,10 @@ const Header = (props) => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to='users' className="nav-link">Users</NavLink>
+              <NavLink to='/users' className="nav-link">Users</NavLink>
             </li>
             <li className="nav-item">
-            <NavLink to='dialogs' className="nav-link">Messages</NavLink>
+            <NavLink to='/dialogs' className="nav-link">Messages</NavLink>
             </li>
           </ul>
         </div>

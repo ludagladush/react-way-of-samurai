@@ -71,8 +71,8 @@ let AppContainer = compose(
       connect(mapStateToProps, {initializeApp}))(App);
   
   const SamuraiJSApp = (props) => {
-      return <BrowserRouter>
-                  <Provider store={store}>
+      return <BrowserRouter basename="react-way-of-samurai">
+                  <Provider store={ store }>
                         <AppContainer/>
                   </Provider>
             </BrowserRouter>

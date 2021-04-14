@@ -17,6 +17,7 @@ const Dialogs = (props) => {
     
     let addNewMessage = (values) => {
         props.sendMessage(values.newMessageBody);
+        document.getElementById('newMessageBody').value='';
     };
     
     if (!props.isAuth) return <Redirect to={'/login'} />

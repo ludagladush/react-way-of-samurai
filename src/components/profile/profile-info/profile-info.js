@@ -58,31 +58,30 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
         <div className='container'>
             <div className='row'>
                 <div className='col-10'> 
-                    <table className="table table-hover">
+                    <table className="table">
                         <thead>
                             <tr>
-                                <th scope="row"><b>Looking for a job</b>:</th>
+                                <th scope="col">Looking for a job:</th>
                                 <td>{ profile.lookingForAJob ? "yes" : "no" }</td>
                             </tr>
                             
                                 { profile.lookingForAJob &&
                                     <tr>
-                                        <th scope="row"><b>My professional skills</b>:</th>
+                                        <th scope="col">My professional skills:</th>
                                         <td>{ profile.lookingForAJobDescription }</td>
                                     </tr>
                                 }   
                             
                             <tr>
-                                <th scope="row"><b>About me</b>:</th>
+                                <th scope="col">About me:</th>
                                 <td>{profile.aboutMe}</td>
                             </tr>
                             <tr>
-                                <th scope="row"><b>Contacts</b>:</th>
+                                <th scope="col" className='contacts'>Contacts:</th>
                                 <td>{Object.keys(profile.contacts).map(key => {
                                 return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
                             })}</td>
                             </tr>
-
                         </thead>
                     </table>
                     {/* <div>
